@@ -9,19 +9,26 @@
 <p id="demo"></p>
 
 <script>
-    /*Many programming languages support arrays with named indexes.
+    /*JavaScript has a built in array constructor new Array().
 
-    Arrays with named indexes are called associative arrays (or hashes).
+    But you can safely use [] instead.
 
-    JavaScript does not support arrays with named indexes.
+    These two different statements both create a new empty array named points:*/
+    const points = new Array();
+    const points = [];
 
-    In JavaScript, arrays always use numbered indexes.*/
-    const person = [];
-    person["firstName"] = "John";
-    person["lastName"] = "Doe";
-    person["age"] = 46;
-    person.length;     // Will return 0
-    person[0];         // Will return undefined
+    // These two different statements both create a new array containing 6 numbers:
+    const points = new Array(40, 100, 1, 5, 25, 10);
+    const points = [40, 100, 1, 5, 25, 10];
+
+    // The new keyword can produce some unexpected results:
+    // Create an array with three elements:
+    const points = new Array(40, 100, 1);
+    //common error
+    // Create an array with one element:
+    const points = [40];
+    // Create an array with 40 undefined elements:
+    const points = new Array(40);
 </script>
 
 </body>
